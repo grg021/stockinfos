@@ -30,5 +30,5 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 <div>
 
     <h1>Charts</h1>
-
+	<p>New Version</p>
 </div>
