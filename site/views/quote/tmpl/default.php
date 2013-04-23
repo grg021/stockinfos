@@ -30,5 +30,6 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 <div>
 
     <h1>Quote</h1>
+    <p>Test content</p>
 
 </div>
