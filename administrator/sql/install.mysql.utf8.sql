@@ -3,6 +3,28 @@ CREATE TABLE IF NOT EXISTS `#__stockinfos` (
   `title` varchar(255) NOT NULL DEFAULT '' COMMENT 'Title',
   `alias` varchar(255) NOT NULL DEFAULT '' COMMENT 'Alias',
   `subtitle` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  
+  `date` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `time` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `opem` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `high` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `low` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `close` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `volume` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `abs-cbn` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `abs-cbn pdr` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `fphc` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  
+  `fphc preferred` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `fgen` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `edc` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `meralco` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `rock` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+ 
+  `benpres` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+  `phisix` varchar(255) NOT NULL DEFAULT '' COMMENT 'Subtitle',
+ 
+ 
   `snippet` varchar(2480) NOT NULL COMMENT 'Snippet or small teaser',
   `fulltext` mediumtext NOT NULL COMMENT 'Content Text',
   `catid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Category Primary Key',

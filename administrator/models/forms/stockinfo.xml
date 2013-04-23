@@ -36,6 +36,136 @@
            class="inputbox"
            size="30" />
 
+
+      <field
+         name="date"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_DATE_LABEL"
+         description="COM_STOCKINFOS_FIELD_DATE_DESC"
+         class="inputbox"
+         size="30" />
+
+      <field
+         name="time"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_TIME_LABEL"
+         description="COM_STOCKINFOS_FIELD_TIME_DESC"
+         class="inputbox"
+         size="30" />
+
+      <field
+         name="open"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_OPEN_LABEL"
+         description="COM_STOCKINFOS_FIELD_OPEN_DESC"
+         class="inputbox"
+         size="30" />
+
+      <field
+         name="high"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_HIGH_LABEL"
+         description="COM_STOCKINFOS_FIELD_HIGH_DESC"
+         class="inputbox"
+         size="30" />
+             
+      <field
+         name="low"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_LOW_LABEL"
+         description="COM_STOCKINFOS_FIELD_LOW_DESC"
+         class="inputbox"
+         size="30" />
+         
+      <field
+         name="close"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_CLOSE_LABEL"
+         description="COM_STOCKINFOS_FIELD_CLOSE_DESC"
+         class="inputbox"
+         size="30" />
+
+      <field
+         name="volume"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_VOLUME_LABEL"
+         description="COM_STOCKINFOS_FIELD_VOLUME_DESC"
+         class="inputbox"
+         size="30" />    
+
+      <field
+         name="abscbn"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_ABSCBN_LABEL"
+         description="COM_STOCKINFOS_FIELD_ABSCBN_DESC"
+         class="inputbox"
+         size="30" />    
+      <field
+         name="abscbn pdr"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_ABSCBNPDR_LABEL"
+         description="COM_STOCKINFOS_FIELD_ABSCBNPDR_DESC"
+         class="inputbox"
+         size="30" />    
+      <field
+         name="fphc"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_FPHC_LABEL"
+         description="COM_STOCKINFOS_FIELD_FPHC_DESC"
+         class="inputbox"
+         size="30" />    
+      <field
+         name="fphc preferred"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_FPHCPREF_LABEL"
+         description="COM_STOCKINFOS_FIELD_FPHCPREF_DESC"
+         class="inputbox"
+         size="30" />    
+      <field
+         name="fgen"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_FGEN_LABEL"
+         description="COM_STOCKINFOS_FIELD_FGEN_DESC"
+         class="inputbox"
+         size="30" />    
+      <field
+         name="edc"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_EDC_LABEL"
+         description="COM_STOCKINFOS_FIELD_EDC_DESC"
+         class="inputbox"
+         size="30" />    
+      <field
+         name="meralco"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_MERALCO_LABEL"
+         description="COM_STOCKINFOS_FIELD_MERALCO_DESC"
+         class="inputbox"
+         size="30" />    
+      <field
+         name="rock"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_ROCK_LABEL"
+         description="COM_STOCKINFOS_FIELD_ROCK_DESC"
+         class="inputbox"
+         size="30" />
+
+     <field
+         name="benpres"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_BENPRES_LABEL"
+         description="COM_STOCKINFOS_FIELD_BENPRES_DESC"
+         class="inputbox"
+         size="30" />
+
+      <field
+         name="phisix"
+         type="text"
+         label="COM_STOCKINFOS_FIELD_PHISIX_LABEL"
+         description="COM_STOCKINFOS_FIELD_PHISIX_DESC"
+         class="inputbox"
+         size="30" />    
+
        <field
            name="snippet"
            type="editor"

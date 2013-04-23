@@ -43,7 +43,7 @@ $parameters = $this->state->get('params');
 	<fieldset>
 		<legend><?php echo JText::_('JEDITOR'); ?></legend>
 
-			<div class="formelm">
+			<?php /*?><div class="formelm">
                 <?php echo $this->form->getLabel('title'); ?>
                 <?php echo $this->form->getInput('title'); ?>
 			</div>
@@ -51,6 +51,41 @@ $parameters = $this->state->get('params');
 			<div class="formelm">
                 <?php echo $this->form->getLabel('subtitle'); ?>
                 <?php echo $this->form->getInput('subtitle'); ?>
+			</div><?php */?>
+            
+            <div class="formelm">
+                <?php echo $this->form->getLabel('date'); ?>
+                <?php echo $this->form->getInput('date'); ?>
+			</div>
+            
+            <div class="formelm">
+                <?php echo $this->form->getLabel('time'); ?>
+                <?php echo $this->form->getInput('time'); ?>
+			</div>
+            
+            <div class="formelm">
+                <?php echo $this->form->getLabel('open'); ?>
+                <?php echo $this->form->getInput('open'); ?>
+			</div>
+            
+            <div class="formelm">
+                <?php echo $this->form->getLabel('high'); ?>
+                <?php echo $this->form->getInput('high'); ?>
+			</div>
+            
+            <div class="formelm">
+                <?php echo $this->form->getLabel('low'); ?>
+                <?php echo $this->form->getInput('low'); ?>
+			</div>
+            
+            <div class="formelm">
+                <?php echo $this->form->getLabel('close'); ?>
+                <?php echo $this->form->getInput('close'); ?>
+			</div>
+            
+            <div class="formelm">
+                <?php echo $this->form->getLabel('volume'); ?>
+                <?php echo $this->form->getInput('volume'); ?>
 			</div>
 
         <div class="formelm-buttons">
@@ -66,6 +101,8 @@ $parameters = $this->state->get('params');
 
 	</fieldset>
 
+	//This module is the right side module
+    //Will edit later :p
     <?php echo $this->loadTemplate('publishing'); ?>
 
     <?php echo $this->loadTemplate('custom_fields'); ?>
