@@ -27,9 +27,92 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 /** uncomment out to display a specific custom field */
 //echo $custom_fields->image1;
 ?>
+<style type="text/css">
+table.hovertable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+table.hovertable th {
+	font-size: 13px;
+	font-weight: normal;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+	padding: 8px;
+	padding-right:88px
+}
+table.hovertable tr {
+	background-color:#d0dafd;
+}
+table.hovertable td {
+	background: rgb(239, 240, 247);;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+	padding: 8px;
+}
+</style>
 <div>
-
     <h1>Quote</h1>
-    <p>Test content</p>
-
+	<table class="hovertable">
+	
+	<tr>
+		<th>PSE : LPZ</th>
+		<th>Listed Investments</th>
+	</tr>
+	<?php
+		mysql_connect("localhost", "root", "") or die(mysql_error()); 
+	mysql_select_db("lopezdb2") or die(mysql_error()); 
+	$data = mysql_query("SELECT * FROM nmwi6_stockinfos WHERE id=2") 
+	or die(mysql_error());
+		while($info = mysql_fetch_array( $data )) 
+		{
+	?>
+	<tr onmouseover="this.style.backgroundColor='#d0dafd';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td>Open : <?php echo $info['open_value']; ?></td>
+		<td>ABS - CBN : <?php echo $info['_abs-cbn']; ?> </td>
+	</tr>
+	
+	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td>High : <?php echo $info['high']; ?></td>
+		<td>ABS - CBN PDR : <?php echo $info['_abs-cbn_pdr']; ?></td>
+	</tr>
+	
+	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td>Close : <?php echo $info['close_value']; ?></td>
+		<td>FPHC : <?php echo $info['fphc']; ?></td>
+	</tr>
+	
+	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td>Change : *computation</td>
+		<td>FPHC Preferred : <?php echo $info['fphc preferred']; ?></td>
+	</tr>
+	
+	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td>Volume : <?php echo $info['volume']; ?></td>
+		<td>FGEN : <?php echo $info['fgen']; ?></td>
+	</tr>
+	
+	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td>52 Week High : *computation</td>
+		<td>EDC : <?php echo $info['edc']; ?></td>
+	</tr>
+	
+	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td>52 Week Low : *computation</td>
+		<td>MERALCO  : <?php echo $info['meralco']; ?></td>
+	</tr>
+	
+	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td></td>
+		<td>ROCK : <?php echo $info['rock']; ?></td>
+	</tr>
+	<?php } ?>
+	
+	</table>
 </div>

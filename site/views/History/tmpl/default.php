@@ -27,8 +27,58 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 /** uncomment out to display a specific custom field */
 //echo $custom_fields->image1;
 ?>
+<style type="text/css">
+table.hovertable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+table.hovertable th {
+	font-size: 13px;
+	font-weight: normal;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+	padding: 8px;
+	padding-right:75px
+}
+table.hovertable tr {
+	background-color:#d0dafd;
+}
+table.hovertable td {
+	background: rgb(239, 240, 247);;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+	padding: 8px;
+}
+</style>
 <div>
 
-    <h1>History</h1>
-
+    <h1>History Share Price</h1>
+	<table class="hovertable">
+	
+	<tr>
+		<th>Date</th>
+		<th>Open</th>
+		<th>High</th>
+		<th>Low</th>
+		<th>Close</th>
+		<th>Volume</th>
+	</tr>
+	
+	<tr onmouseover="this.style.backgroundColor='#d0dafd';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td>Sample Date</td>
+		<td>Sample Open</td>
+		<td>Sample High</td>
+		<td>Sample Low</td>
+		<td>Sample Close</td>
+		<td>Sample Volume</td>
+	</tr>
+	
+	</table>
 </div>

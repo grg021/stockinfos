@@ -21,30 +21,6 @@
             size="30"
 			required="true" />
 
-        <field
-         name="date"
-         type="text"
-         label="COM_STOCKINFOS_FIELD_DATE_LABEL"
-         description="COM_STOCKINFOS_FIELD_DATE_DESC"
-         class="inputbox"
-         size="30" />
-
-         <field
-         name="time"
-         type="text"
-         label="COM_STOCKINFOS_FIELD_TIME_LABEL"
-         description="COM_STOCKINFOS_FIELD_TIME_DESC"
-         class="inputbox"
-         size="30" />
-
-        <field
-         name="open"
-         type="text"
-         label="COM_STOCKINFOS_FIELD_OPEN_LABEL"
-         description="COM_STOCKINFOS_FIELD_OPEN_DESC"
-         class="inputbox"
-         size="30" />
-
 		<field
             name="alias"
             type="text"

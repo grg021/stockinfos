@@ -35,11 +35,11 @@ JHtml::_('behavior.keepalive');
 		<fieldset class="adminform">
 			<legend><?php echo empty($this->item->id) ? JText::_('COM_STOCKINFOS_NEW_STOCKINFO') : JText::sprintf('COM_STOCKINFOS_EDIT_STOCKINFO', $this->item->id); ?></legend>
 			<ul class="adminformlist">
-				<?php /*?><li><?php echo $this->form->getLabel('title'); ?>
+				<li><?php echo $this->form->getLabel('title'); ?>
 				<?php echo $this->form->getInput('title'); ?></li>
 
 				<li><?php echo $this->form->getLabel('subtitle'); ?>
-				<?php echo $this->form->getInput('subtitle'); ?></li><?php */?>
+				<?php echo $this->form->getInput('subtitle'); ?></li>
                 
                 <li><?php echo $this->form->getLabel('date'); ?>
 				<?php echo $this->form->getInput('date'); ?></li>
@@ -88,11 +88,11 @@ JHtml::_('behavior.keepalive');
                 
                  <li><?php echo $this->form->getLabel('benpres'); ?>
 				<?php echo $this->form->getInput('benpres'); ?></li>
+                
                  <li><?php echo $this->form->getLabel('phisix'); ?>
 				<?php echo $this->form->getInput('phisix'); ?></li>
-                         
 			</ul>
-            
+
 			<div class="clr"></div>
 			<?php echo $this->form->getLabel('snippet'); ?>
 			<div class="clr"></div>
@@ -102,7 +102,6 @@ JHtml::_('behavior.keepalive');
 			<?php echo $this->form->getLabel('fulltext'); ?>
 			<div class="clr"></div>
 			<?php echo $this->form->getInput('fulltext'); ?>
-			
 		</fieldset>
 	</div>
 

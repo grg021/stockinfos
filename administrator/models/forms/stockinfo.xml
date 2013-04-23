@@ -164,7 +164,7 @@
          label="COM_STOCKINFOS_FIELD_PHISIX_LABEL"
          description="COM_STOCKINFOS_FIELD_PHISIX_DESC"
          class="inputbox"
-         size="30" />    
+         size="30" />         
 
        <field
            name="snippet"
