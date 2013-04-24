@@ -58,8 +58,18 @@ table.hovertable td {
 }
 </style>
 <div>
-
     <h1>History Share Price</h1>
+	<form action="index.php?Itemid=112" method="POST">
+	Search : <input type="text" name="search"><input type="submit" value="Enter" name="submit">
+	</form>
+	<?php
+	if(isset($_POST['search'])){
+		echo "$_POST[search]";
+		
+	}
+	
+	?>
+	<br>
 	<table class="hovertable">
 	
 	<tr>
@@ -72,9 +82,18 @@ table.hovertable td {
 	</tr>
 	
 	<?php
-	mysql_connect("localhost", "root", "") or die(mysql_error()); 
-	mysql_select_db("lopezdb2") or die(mysql_error()); 
-	$data = mysql_query("SELECT * FROM nmwi6_stockinfos") 
+	error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
+$conf =& JFactory::getConfig();
+
+$host = $conf->getValue('config.host');
+$user = $conf->getValue('config.user');
+$password = $conf->getValue('config.password');
+$database = $conf->getValue('config.db');
+$prefix = $conf->getValue('config.dbprefix');
+$table = "$prefix"."stockinfos";
+	mysql_connect("$host", "$user", "$root") or die(mysql_error()); 
+	mysql_select_db("$database") or die(mysql_error()); 
+	$data = mysql_query("SELECT * FROM $table") 
 	or die(mysql_error());
 	while($info = mysql_fetch_array( $data )) 
 		{
