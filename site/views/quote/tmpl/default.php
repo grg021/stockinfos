@@ -66,11 +66,11 @@ table.hovertable td {
 		<th>Listed Investments</th>
 	</tr>
 	<?php
-		mysql_connect("localhost", "root", "") or die(mysql_error()); 
+	mysql_connect("localhost", "root", "") or die(mysql_error()); 
 	mysql_select_db("lopezdb2") or die(mysql_error()); 
 	$data = mysql_query("SELECT * FROM nmwi6_stockinfos WHERE id=2") 
 	or die(mysql_error());
-		while($info = mysql_fetch_array( $data )) 
+	while($info = mysql_fetch_array( $data )) 
 		{
 	?>
 	<tr onmouseover="this.style.backgroundColor='#d0dafd';" onmouseout="this.style.backgroundColor='#e8edff';">

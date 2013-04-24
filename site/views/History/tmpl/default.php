@@ -71,14 +71,23 @@ table.hovertable td {
 		<th>Volume</th>
 	</tr>
 	
-	<tr onmouseover="this.style.backgroundColor='#d0dafd';" onmouseout="this.style.backgroundColor='#e8edff';">
-		<td>Sample Date</td>
-		<td>Sample Open</td>
-		<td>Sample High</td>
-		<td>Sample Low</td>
-		<td>Sample Close</td>
-		<td>Sample Volume</td>
-	</tr>
+	<?php
+	mysql_connect("localhost", "root", "") or die(mysql_error()); 
+	mysql_select_db("lopezdb2") or die(mysql_error()); 
+	$data = mysql_query("SELECT * FROM nmwi6_stockinfos") 
+	or die(mysql_error());
+	while($info = mysql_fetch_array( $data )) 
+		{
+	?>
 	
+	<tr onmouseover="this.style.backgroundColor='#d0dafd';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td><?php echo $info['AsOfDate'];?></td>
+		<td><?php echo $info['open_value'];?></td>
+		<td><?php echo $info['high'];?></td>
+		<td><?php echo $info['low'];?></td>
+		<td><?php echo $info['close_value'];?></td>
+		<td><?php echo $info['volume'];?></td>
+	</tr>
+	<?php } ?>
 	</table>
 </div>
