@@ -26,6 +26,15 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
 /** uncomment out to display a specific custom field */
 //echo $custom_fields->image1;
+error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
+$conf =& JFactory::getConfig();
+
+$host = $conf->getValue('config.host');
+$user = $conf->getValue('config.user');
+$password = $conf->getValue('config.password');
+$database = $conf->getValue('config.db');
+$prefix = $conf->getValue('config.dbprefix');
+$table = "$prefix"."stockinfos";
 ?>
 <style type="text/css">
 table.hovertable {
@@ -66,9 +75,9 @@ table.hovertable td {
 		<th>Listed Investments</th>
 	</tr>
 	<?php
-	mysql_connect("localhost", "root", "") or die(mysql_error()); 
-	mysql_select_db("lopezdb2") or die(mysql_error()); 
-	$data = mysql_query("SELECT * FROM nmwi6_stockinfos WHERE id=2") 
+	mysql_connect("$host", "$user", "$password") or die(mysql_error()); 
+	mysql_select_db("$database") or die(mysql_error()); 
+	$data = mysql_query("SELECT * FROM $table WHERE id=2") 
 	or die(mysql_error());
 	while($info = mysql_fetch_array( $data )) 
 		{
