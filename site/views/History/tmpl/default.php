@@ -91,7 +91,7 @@ $password = $conf->getValue('config.password');
 $database = $conf->getValue('config.db');
 $prefix = $conf->getValue('config.dbprefix');
 $table = "$prefix"."stockinfos";
-	mysql_connect("$host", "$user", "$root") or die(mysql_error()); 
+	mysql_connect("$host", "$user", "$password") or die(mysql_error()); 
 	mysql_select_db("$database") or die(mysql_error()); 
 	$data = mysql_query("SELECT * FROM $table") 
 	or die(mysql_error());
