@@ -163,8 +163,8 @@ $table = "$prefix"."stockinfos";
 	mysql_select_db("$database") or die(mysql_error()); 
 	
 	//if the user already entered desired year
-	if($_POST['submit'] != NULL){
-	$data = mysql_query("SELECT * FROM $table WHERE `AsOfDate`<='$call2' AND `AsOfDate`>='$call1'") 
+	if($_POST['year'] != NULL){
+	$data = mysql_query("SELECT * FROM $table WHERE `AsOfDate`<='$call2' AND `AsOfDate`>='$call1' order by AsOfDate desc limit 10") 
 	or die(mysql_error());
 	while($info = mysql_fetch_array( $data ))
 		{
@@ -182,7 +182,7 @@ $table = "$prefix"."stockinfos";
 	<?php }
 	}
 	else{
-	$data = mysql_query("SELECT * FROM $table") 
+	$data = mysql_query("SELECT * FROM $table order by AsOfDate desc limit 10") 
 	or die(mysql_error());
 	while($info = mysql_fetch_array( $data ))
 		{
