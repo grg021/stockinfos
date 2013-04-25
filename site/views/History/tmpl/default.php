@@ -105,7 +105,6 @@ table.hovertable td {
 		$datenow = date("d");
 		$call1 = "$selectyear"."-"."$selmon"."-"."01";
 		$call2 = "$selectyear"."-"."$selmon"."-"."31";
-		echo"$call1<br>$call2";
 	?>
 	
 	<form action="<?php echo JRoute::_('index.php')?>" method="POST">
