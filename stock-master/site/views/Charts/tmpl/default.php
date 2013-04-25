@@ -9,7 +9,7 @@ defined('_JEXEC') or die;
 
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
-$media = JURI::root() . "site/views/Charts/jsonp.php";
+$defj = JURI::root() . "media/com_stockinfos/js/jsonp.php";
 $highstock = JURI::root() . "media/com_stockinfos/js/highstock.js";
 $export = JURI::root() . "media/com_stockinfos/js/modules/exporting.js";
 
@@ -23,7 +23,7 @@ $export = JURI::root() . "media/com_stockinfos/js/modules/exporting.js";
 		<script type="text/javascript">
 $(function() {
 //$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
-	$.getJSON('<?php echo $media; ?>, function(data) {
+	$.getJSON('<?php echo $defj; ?>', function(data) {
 		// Create the chart
 		console.log(data);
 		$('#container').highcharts('StockChart', {
