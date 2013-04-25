@@ -67,21 +67,26 @@ table.hovertable td {
 }
 </style>
 <div>
-    <h1>Quote</h1>
+    
+	<?php
+	mysql_connect("$host", "$user", "$password") or die(mysql_error()); 
+	mysql_select_db("$database") or die(mysql_error()); 
+	$data = mysql_query("SELECT * FROM $table order by AsOfDate desc limit 1;") 
+	or die(mysql_error());
+	while($info = mysql_fetch_array( $data )) 
+		{
+	?>
+	
+	<h1>Quote for <?php echo $info['AsOfDate']; ?> </h1>
+	
+	
 	<table class="hovertable">
 	
 	<tr>
 		<th>PSE : LPZ</th>
 		<th>Listed Investments</th>
 	</tr>
-	<?php
-	mysql_connect("$host", "$user", "$password") or die(mysql_error()); 
-	mysql_select_db("$database") or die(mysql_error()); 
-	$data = mysql_query("SELECT * FROM $table WHERE id=2") 
-	or die(mysql_error());
-	while($info = mysql_fetch_array( $data )) 
-		{
-	?>
+	
 	<tr onmouseover="this.style.backgroundColor='#d0dafd';" onmouseout="this.style.backgroundColor='#e8edff';">
 		<td>Open : <?php echo $info['open_value']; ?></td>
 		<td>ABS - CBN : <?php echo $info['_abs-cbn']; ?> </td>
