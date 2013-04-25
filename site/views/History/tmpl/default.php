@@ -103,8 +103,8 @@ table.hovertable td {
 		$yearnow = date("Y");
 		$monnow = date("m");
 		$datenow = date("d");
-		$call1 = "<br>$selectyear"."-"."$selmon"."-"."01";
-		$call2 = "<br>$selectyear"."-"."$selmon"."-"."31";
+		$call1 = "$selectyear"."-"."$selmon"."-"."01";
+		$call2 = "$selectyear"."-"."$selmon"."-"."31";
 		echo"$call1<br>$call2";
 	?>
 	
@@ -165,7 +165,7 @@ $table = "$prefix"."stockinfos";
 	
 	//if the user already entered desired year
 	if($_POST['submit'] != NULL){
-	$data = mysql_query("SELECT * FROM $table WHERE `AsOfDate` NOT BETWEEN '$call2' AND '$call1'") 
+	$data = mysql_query("SELECT * FROM $table WHERE `AsOfDate`<='$call2' AND `AsOfDate`>='$call1'") 
 	or die(mysql_error());
 	while($info = mysql_fetch_array( $data ))
 		{
