@@ -59,16 +59,85 @@ table.hovertable td {
 </style>
 <div>
     <h1>History Share Price</h1>
-	<form action="index.php?Itemid=112" method="POST">
-	Search : <input type="text" name="search"><input type="submit" value="Enter" name="submit">
-	</form>
-	<?php
-	if(isset($_POST['search'])){
-		echo "$_POST[search]";
-		
-	}
 	
+	<?php
+	error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
+		$selectyear = $_POST['year'];
+		$selectmonth = $_POST['month'];
+		if($selectmonth == January){
+		$selmon = "01";
+		}
+		else if($selectmonth == February){
+		$selmon = "02";
+		}
+		else if($selectmonth == March){
+		$selmon = "03";
+		}
+		else if($selectmonth == April){
+		$selmon = "04";
+		}
+		else if($selectmonth == May){
+		$selmon = "05";
+		}
+		else if($selectmonth == June){
+		$selmon = "06";
+		}
+		else if($selectmonth == July){
+		$selmon = "07";
+		}
+		else if($selectmonth == August){
+		$selmon = "08";
+		}
+		else if($selectmonth == September){
+		$selmon = "09";
+		}
+		else if($selectmonth == October){
+		$selmon = "10";
+		}
+		else if($selectmonth == November){
+		$selmon = "11";
+		}
+		else if($selectmonth == December){
+		$selmon = "12";
+		}
+		$yearnow = date("Y");
+		$monnow = date("m");
+		$datenow = date("d");
+		$call1 = "<br>$selectyear"."-"."$selmon"."-"."01";
+		$call2 = "<br>$selectyear"."-"."$selmon"."-"."31";
+		echo"$call1<br>$call2";
 	?>
+	
+	<form action="<?php echo JRoute::_('index.php')?>" method="POST">
+	<select name="year" class="body">
+                          <?php
+						  for($i=$yearnow;$i>=2000;$i--){
+						  ?>                  
+                                            <option value="<?php echo"$i"; ?>"><?php echo"$i"; ?></option>
+                                           
+									<?php } ?>
+								</select>
+	               
+                                    <?php
+								$curr_month = date("m");
+								$month = array (01=>"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+								$select = "<select name=\"month\">\n";
+								foreach ($month as $key => $val) {
+									$select .= "\t<option val=\"".$key."\"";
+									if ($key == $curr_month) {
+									$wew = $key;
+									$selected =	$select .= " selected=\"selected\">".$val."</option>\n"; ;
+									} else {
+										$select .= ">".$val."</option>\n";
+									}
+								}
+								$select .= "</select>";
+								echo $select;
+								?>
+								
+								
+	<input type="submit" value="Enter" name="submit">
+	</form>
 	<br>
 	<table class="hovertable">
 	
@@ -93,10 +162,14 @@ $prefix = $conf->getValue('config.dbprefix');
 $table = "$prefix"."stockinfos";
 	mysql_connect("$host", "$user", "$password") or die(mysql_error()); 
 	mysql_select_db("$database") or die(mysql_error()); 
-	$data = mysql_query("SELECT * FROM $table") 
+	
+	//if the user already entered desired year
+	if($_POST['submit'] != NULL){
+	$data = mysql_query("SELECT * FROM $table WHERE `AsOfDate` NOT BETWEEN '$call2' AND '$call1'") 
 	or die(mysql_error());
-	while($info = mysql_fetch_array( $data )) 
+	while($info = mysql_fetch_array( $data ))
 		{
+		
 	?>
 	
 	<tr onmouseover="this.style.backgroundColor='#d0dafd';" onmouseout="this.style.backgroundColor='#e8edff';">
@@ -107,6 +180,24 @@ $table = "$prefix"."stockinfos";
 		<td><?php echo $info['close_value'];?></td>
 		<td><?php echo $info['volume'];?></td>
 	</tr>
-	<?php } ?>
+	<?php }
+	}
+	else{
+	$data = mysql_query("SELECT * FROM $table") 
+	or die(mysql_error());
+	while($info = mysql_fetch_array( $data ))
+		{
+		
+	?>
+	
+	<tr onmouseover="this.style.backgroundColor='#d0dafd';" onmouseout="this.style.backgroundColor='#e8edff';">
+		<td><?php echo $info['AsOfDate'];?></td>
+		<td><?php echo $info['open_value'];?></td>
+		<td><?php echo $info['high'];?></td>
+		<td><?php echo $info['low'];?></td>
+		<td><?php echo $info['close_value'];?></td>
+		<td><?php echo $info['volume'];?></td>
+	</tr>
+	<?php } } ?>
 	</table>
 </div>
