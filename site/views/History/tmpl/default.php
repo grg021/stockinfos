@@ -198,5 +198,5 @@ $table = "$prefix"."stockinfos";
 		<td><?php echo $info['volume'];?></td>
 	</tr>
 	<?php } } ?>
-	</table>
+	</table> 
 </div>
