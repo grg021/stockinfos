@@ -89,12 +89,12 @@ table.hovertable td {
 	
 	<tr onmouseover="this.style.backgroundColor='#d0dafd';" onmouseout="this.style.backgroundColor='#e8edff';">
 		<td>Open : <?php echo $info['open_value']; ?></td>
-		<td>ABS - CBN : <?php echo $info['_abs-cbn']; ?> </td>
+		<td>ABS - CBN : <?php echo $info['abscbn']; ?> </td>
 	</tr>
 	
 	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
 		<td>High : <?php echo $info['high']; ?></td>
-		<td>ABS - CBN PDR : <?php echo $info['_abs-cbn_pdr']; ?></td>
+		<td>ABS - CBN PDR : <?php echo $info['abscbnpdr']; ?></td>
 	</tr>
 	
 	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
