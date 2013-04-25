@@ -9,7 +9,9 @@ defined('_JEXEC') or die;
 
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
-$u =& JFactory::getURI();
+$defj = JURI::root() . "media/com_stockinfos/js/jsonp.php";
+$highstock = JURI::root() . "media/com_stockinfos/js/highstock.js";
+$export = JURI::root() . "media/com_stockinfos/js/modules/exporting.js";
 
 ?>
 <html>
@@ -21,7 +23,7 @@ $u =& JFactory::getURI();
 		<script type="text/javascript">
 $(function() {
 //$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
-	$.getJSON('<?php echo $u ?>, function(data) {
+	$.getJSON('<?php echo $defj; ?>', function(data) {
 		// Create the chart
 		console.log(data);
 		$('#container').highcharts('StockChart', {
@@ -49,8 +51,8 @@ $(function() {
 	</head> 
     
 	<body>    
-<script src="<?php echo $this->baseurl ?>/media/<?php echo $this->media;?>com_stockinfos/js/highstock.js" ></script>
-<script src="<?php echo $this->baseurl ?>/media/<?php echo $this->media;?>com_stockinfos/js/modules/exporting.js" ></script>
+<script src="<?php echo $highstock; ?>" ></script>
+<script src="<?php echo $export; ?>" ></script>
 
 <div id="container" style="height: 500px; min-width: 500px"></div>
 	</body>
