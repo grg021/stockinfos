@@ -24,14 +24,14 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 	  or die("Could not select examples");
 	  
 	//execute the SQL query and return records
-	$result = mysql_query("SELECT asset_id FROM $table");
+	$result = mysql_query("SELECT open_value FROM $table");
 	//fetch tha data from the database
 	$result_array = array();
 	
 	while ($row = mysql_fetch_assoc($result)) {
 	   $r = array();
 	   //$r[] = strtotime($row{'AsOfDate'})*1000;
-	   $r[] = floatval($row{'asset_id'});
+	   $r[] = floatval($row{'open_value'});
 	   $result_array[] = $r;
 	}
 	print json_encode($result_array);
