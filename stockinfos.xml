@@ -30,6 +30,14 @@
 		<folder>language</folder>
         <folder>models</folder>
         <folder>views</folder>
+        <!-- START MODULE -->
+        <filename>mod_helloworld.xml</filename>
+        <filename module="mod_helloworld">mod_helloworld.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <!-- END MODULE -->
 	</files>
 
 	<media destination="com_stockinfos" folder="media">
