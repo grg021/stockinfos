@@ -44,8 +44,8 @@ JHtml::_('behavior.keepalive');
                 <li><?php echo $this->form->getLabel('AsOfDate'); ?>
 				<?php echo $this->form->getInput('AsOfDate'); ?></li>
 
-				<li><?php echo $this->form->getLabel('AsOfTime'); ?>
-				<?php echo $this->form->getInput('AsOfTime').'<br /><br />'; ?></li>
+				<li><?php echo $this->form->getLabel('time'); ?>
+				<?php echo $this->form->getInput('time').'<br /><br />'; ?></li>
                 
                 <li><?php echo $this->form->getLabel('open_value'); ?>
 				<?php echo $this->form->getInput('open_value'); ?></li>

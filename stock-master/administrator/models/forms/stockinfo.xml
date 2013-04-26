@@ -46,7 +46,7 @@
          size="30" />
 
       <field
-         name="AsOfTime"
+         name="time"
          type="text"
          label="COM_STOCKINFOS_FIELD_TIME_LABEL"
          description="COM_STOCKINFOS_FIELD_TIME_DESC"
