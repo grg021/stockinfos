@@ -8,6 +8,9 @@
 defined('_JEXEC') or die;
 
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
+
+$u =& JFactory::getURI();
+
 ?>
 <html>
 	<head>
@@ -18,7 +21,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 		<script type="text/javascript">
 $(function() {
 //$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
-	$.getJSON('<?php echo $this->baseurl ?>/media/<?php echo $this->media;?>com_stockinfos/js/jsonp.php', function(data) {
+	$.getJSON('<?php echo $u ?>, function(data) {
 		// Create the chart
 		console.log(data);
 		$('#container').highcharts('StockChart', {
