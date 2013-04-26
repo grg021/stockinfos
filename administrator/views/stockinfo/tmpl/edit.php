@@ -41,8 +41,8 @@ JHtml::_('behavior.keepalive');
 				<li><?php echo $this->form->getLabel('subtitle'); ?>
 				<?php echo $this->form->getInput('subtitle'); ?></li>
                 
-                <li><?php echo $this->form->getLabel('date'); ?>
-				<?php echo $this->form->getInput('date'); ?></li>
+                <li><?php echo $this->form->getLabel('AsOfDate'); ?>
+				<?php echo $this->form->getInput('AsOfDate'); ?></li>
 
 				<li><?php echo $this->form->getLabel('time'); ?>
 				<?php echo $this->form->getInput('time').'<br /><br />'; ?></li>

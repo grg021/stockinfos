@@ -38,7 +38,7 @@
 
 
       <field
-         name="date"
+         name="AsOfDate"
          type="text"
          label="COM_STOCKINFOS_FIELD_DATE_LABEL"
          description="COM_STOCKINFOS_FIELD_DATE_DESC"
