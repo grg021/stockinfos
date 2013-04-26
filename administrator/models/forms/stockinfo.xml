@@ -54,7 +54,7 @@
          size="30" />
 
       <field
-         name="open"
+         name="open_value"
          type="text"
          label="COM_STOCKINFOS_FIELD_OPEN_LABEL"
          description="COM_STOCKINFOS_FIELD_OPEN_DESC"
@@ -78,7 +78,7 @@
          size="30" />
          
       <field
-         name="close"
+         name="close_value"
          type="text"
          label="COM_STOCKINFOS_FIELD_CLOSE_LABEL"
          description="COM_STOCKINFOS_FIELD_CLOSE_DESC"
@@ -101,7 +101,7 @@
          class="inputbox"
          size="30" />    
       <field
-         name="abscbn pdr"
+         name="abscbnpdr"
          type="text"
          label="COM_STOCKINFOS_FIELD_ABSCBNPDR_LABEL"
          description="COM_STOCKINFOS_FIELD_ABSCBNPDR_DESC"

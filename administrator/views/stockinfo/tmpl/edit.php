@@ -47,8 +47,8 @@ JHtml::_('behavior.keepalive');
 				<li><?php echo $this->form->getLabel('time'); ?>
 				<?php echo $this->form->getInput('time').'<br /><br />'; ?></li>
                 
-                <li><?php echo $this->form->getLabel('open'); ?>
-				<?php echo $this->form->getInput('open'); ?></li>
+                <li><?php echo $this->form->getLabel('open_value'); ?>
+				<?php echo $this->form->getInput('open_value'); ?></li>
 
 				<li><?php echo $this->form->getLabel('high'); ?>
 				<?php echo $this->form->getInput('high'); ?></li>      
@@ -56,17 +56,17 @@ JHtml::_('behavior.keepalive');
                 <li><?php echo $this->form->getLabel('low'); ?>
 				<?php echo $this->form->getInput('low'); ?></li>      
                 
-                <li><?php echo $this->form->getLabel('close'); ?>
-				<?php echo $this->form->getInput('close'); ?></li>      
+                <li><?php echo $this->form->getLabel('close_value'); ?>
+				<?php echo $this->form->getInput('close_value'); ?></li>      
                 
                 <li><?php echo $this->form->getLabel('volume'); ?>
 				<?php echo $this->form->getInput('volume').'<br /><br />'; ?></li>      
                
-                 <li><?php echo $this->form->getLabel('abs-cbn'); ?>
-				<?php echo $this->form->getInput('abs-cbn'); ?></li>
+                 <li><?php echo $this->form->getLabel('abscbn'); ?>
+				<?php echo $this->form->getInput('abscbn'); ?></li>
                 
-                 <li><?php echo $this->form->getLabel('abs-cbn pdr'); ?>
-				<?php echo $this->form->getInput('abs-cbn pdr'); ?></li>
+                 <li><?php echo $this->form->getLabel('abscbnpdr'); ?>
+				<?php echo $this->form->getInput('abscbnpdr'); ?></li>
                 
                  <li><?php echo $this->form->getLabel('fphc'); ?>
 				<?php echo $this->form->getInput('fphc'); ?></li>
