@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-	<layout title="Quote"
+	<layout title="Stock Watch"
             option="com_stockinfos_stockinfo_view_default_option">
 		<message>
 			<![CDATA[COM_STOCKINFOS_CATEGORY_VIEW_DEFAULT_DESC]]>
