@@ -9,7 +9,7 @@ defined('_JEXEC') or die;
 
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
-$defj = JURI::root() . "components/com_stockinfos/views/Charts/jsonp.php";
+$defj = JURI::root() . "media/com_stockinfos/js/jsonp.php";
 $highstock = JURI::root() . "media/com_stockinfos/js/highstock.js";
 $export = JURI::root() . "media/com_stockinfos/js/modules/exporting.js";
 
@@ -33,7 +33,7 @@ $(function() {
 			},
 
 			title : {
-				text : 'Lopez Holding Corporation'
+				text : 'Lopez Holding Corp'
 			},
 			
 			series : [{
