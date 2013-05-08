@@ -23,7 +23,7 @@ $export = JURI::root() . "media/com_stockinfos/js/modules/exporting.js";
 		<script type="text/javascript">
 $(function() {
 //$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
-	$.getJSON('<?php echo $defj; ?>', function(data) {
+	$.getJSON('<?php echo JRoute::_('index.php?option=com_stockinfos&amp;view=Charts&amp;&amp;format=json'); ?>', function(data) {
 		// Create the chart
 		console.log(data);
 		$('#container').highcharts('StockChart', {
