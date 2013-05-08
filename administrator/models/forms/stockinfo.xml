@@ -43,6 +43,7 @@
          label="COM_STOCKINFOS_FIELD_DATE_LABEL"
          description="COM_STOCKINFOS_FIELD_DATE_DESC"
          class="inputbox"
+         id="datepicker"
          size="30" />
 
       <field
@@ -51,6 +52,16 @@
          label="COM_STOCKINFOS_FIELD_TIME_LABEL"
          description="COM_STOCKINFOS_FIELD_TIME_DESC"
          class="inputbox"
+         id="timepicker"
+         size="30" />
+
+      <field
+         name="setTimeButton"
+         type="button"
+         label="COM_STOCKINFOS_FIELD_TIME_LABEL"
+         description="COM_STOCKINFOS_FIELD_TIME_DESC"
+         class="inputbox"
+         id="setTimeButton"
          size="30" />
 
       <field

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Fox Contact</name>
+	<creationDate></creationDate>
+	<author>Demis Palma</author>
+	<authorEmail>demis@fox.ra.it</authorEmail>
+	<authorUrl>http://www.fox.ra.it/</authorUrl>
+	<copyright>Demis Palma</copyright>
+	<license>GNU/GPLv3</license>
+	<version>2.0.17</version>
+	<description>This is a Stock Infos Module </description>
+
+	<files>
+		<filename module="mod_stockwatch">mod_stockwatch.php</filename>
+		<filename>mod_stockwatch.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>sql</folder>
+		<folder>tmpl</folder>
+	</files>

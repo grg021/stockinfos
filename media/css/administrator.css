@@ -13,3 +13,10 @@
 .icon-48-stockinfo { background-image: url(../images/48/stockinfos.png); }
 .icon-48-stockinfo-add { background-image: url(../images/48/stockinfos.png); }
 .icon-48-stockinfo-edit { background-image: url(../images/48/stockinfos.png); }
+
+/* -- BACK END INPUT FIELDS CSS ----- */
+
+ul.adminformlist, ul.adminformlist li label{font-size:13px !important;}
+ul.adminformlist, ul.adminformlist li input{font-size:12px !important;}
+
+	

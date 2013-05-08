@@ -24,14 +24,16 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 	  or die("Could not select examples");
 	  
 	//execute the SQL query and return records
-	$result = mysql_query("SELECT open_value FROM $table");
+	$result = mysql_query("SELECT AsOfDate FROM $table");
 	//fetch tha data from the database
 	$result_array = array();
+	var_dump($result);
 	
 	while ($row = mysql_fetch_assoc($result)) {
 	   $r = array();
-	   //$r[] = strtotime($row{'AsOfDate'})*1000;
-	   $r[] = floatval($row{'open_value'});
+	   $r[] = strtotime($row{'AsOfDate'})*1000;
+	   //$r[] = strtotime($row{echo $this->form->getInput('AsOfDate');} )*1000;
+	   //$r[] = floatval($row{'open_value'});
 	   $result_array[] = $r;
 	}
 	print json_encode($result_array);

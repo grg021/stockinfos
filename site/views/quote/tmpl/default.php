@@ -98,12 +98,33 @@ table.hovertable td {
 			{
 			$wklow = $wlow['low'];
 			}
-			
+		//looking for the 2nd most updated close_value	
+		$change = mysql_query("SELECT * FROM $table
+		WHERE AsOfDate = (SELECT MAX(AsOfDate) FROM $table WHERE AsOfDate < (SELECT MAX(`AsOfDate`) FROM $table))")
+		or die(mysql_error());
+		while($yesterday = mysql_fetch_array( $change ))
+			{
+			$ystrdy = $yesterday['close_value'];
+			}
+
+			$today = $info['close_value'];
 		//SELECT high FROM $table where order by high limit 1		
-		
+			
+			
+			if($today>$ystrdy){
+			$percent = (($today-$ystrdy) / $ystrdy) * 100;
+			$percent_val = number_format($percent, 2);
+			$percentChange ="+ $percent_val";
+			}
+			else{
+			$percent_val = (($today-$ystrdy) / $ystrdy) * 100;
+			$percentChange = number_format($percent_val, 2);
+			}
 	?>
 	
-	<h1>Quote for <?php echo $info['AsOfDate'];echo "$weelow"; ?> </h1>
+	 
+	
+	<h1>Quote for <?php echo $info['AsOfDate']; ?> </h1>
 	
 	<table class="hovertable">
 	
@@ -128,7 +149,7 @@ table.hovertable td {
 	</tr>
 	
 	<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#e8edff';">
-		<td>Change : *computation</td>
+		<td>Change : <?php echo $percentChange; ?></td>
 		<td>FPHC Preferred : <?php echo $info['fphc preferred']; ?></td>
 	</tr>
 	

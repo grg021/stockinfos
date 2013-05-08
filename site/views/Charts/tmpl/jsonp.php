@@ -7,13 +7,14 @@ header("Content-type: text/json");
 defined('_JEXEC') or die('Restricted Access');
 
 define( '_JEXEC', 1 );
-define( 'DS', DIRECTORY_SEPARATOR );
-define( 'JPATH_BASE', realpath(dirname(__FILE__).DS.'..' ));
+        define( 'DS', DIRECTORY_SEPARATOR );
+        define( 'JPATH_BASE', realpath(dirname(__FILE__).DS.'..' ));
 
-require_once ( JPATH_BASE .DS.'includes'.DS.'defines.php' );
-require_once ( JPATH_BASE .DS.'includes'.DS.'framework.php' );
 
-$mainframe = JFactory::getApplication('site');
+        require_once ( JPATH_BASE .DS.'includes'.DS.'defines.php' );
+        require_once ( JPATH_BASE .DS.'includes'.DS.'framework.php' );
+
+        $mainframe = JFactory::getApplication('site');
 
 
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
