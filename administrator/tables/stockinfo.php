@@ -72,20 +72,20 @@ class StockinfosTableStockinfo extends JTable
      */
     public function check()
     {
-        if (trim($this->title) == '') {
-            $this->setError(JText::_('COM_STOCKINFOS_WARNING_PROVIDE_VALID_NAME'));
-            return false;
-        }
-
-        if (trim($this->alias) == '') {
-            $this->alias = $this->title;
-        }
-
-        $this->alias = JApplication::stringURLSafe($this->alias);
-
-        if (trim(str_replace('-','',$this->alias)) == '') {
-            $this->alias = JFactory::getDate()->format('Y-m-d-H-i-s');
-        }
+        //if (trim($this->title) == '') {
+//            $this->setError(JText::_('COM_STOCKINFOS_WARNING_PROVIDE_VALID_NAME'));
+//            return false;
+//        }
+//
+//        if (trim($this->alias) == '') {
+//            $this->alias = $this->title;
+//        }
+//
+//        $this->alias = JApplication::stringURLSafe($this->alias);
+//
+//        if (trim(str_replace('-','',$this->alias)) == '') {
+//            $this->alias = JFactory::getDate()->format('Y-m-d-H-i-s');
+//        }
 
         // Check the publish down date is not earlier than publish up.
         if ($this->publish_down > $this->_db->getNullDate() && $this->publish_down < $this->publish_up) {

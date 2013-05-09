@@ -42,22 +42,24 @@ JHtml::_('behavior.keepalive');
 	});
   });
 </script>
-<form action="<?php echo JRoute::_('index.php?option=com_stockinfos&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="item-form" class="form-validate">
+<form action="<?php echo JRoute::_('index.php?option=com_stockinfos&layout=edit&id='.(int) $this->item->id); ?>" method="post" 
+name="adminForm" id="item-form" class="form-validate">
 	<div class="width-60 fltlft">
 		<fieldset class="adminform">
-			<legend><?php echo empty($this->item->id) ? JText::_('COM_STOCKINFOS_NEW_STOCKINFO') : JText::sprintf('COM_STOCKINFOS_EDIT_STOCKINFO', $this->item->id); ?></legend>
+			<legend><?php echo empty($this->item->id) ? JText::_('COM_STOCKINFOS_NEW_STOCKINFO') : 
+			JText::sprintf('COM_STOCKINFOS_EDIT_STOCKINFO', $this->item->id); ?></legend>
 			<ul class="adminformlist">
-				<li><?php echo $this->form->getLabel('title'); ?>
-				<?php echo $this->form->getInput('title'); ?></li>
+				<li><?php //echo $this->form->getLabel('title'); ?>
+				<?php //echo $this->form->getInput('title'); ?></li>
 				
-				<li><?php echo $this->form->getLabel('subtitle'); ?>
-				<?php echo $this->form->getInput('subtitle'); ?></li>
+				<li><?php //echo $this->form->getLabel('subtitle'); ?>
+				<?php //echo $this->form->getInput('subtitle'); ?></li>
                 
                 <li><?php echo $this->form->getLabel('AsOfDate'); ?>
 				<?php echo $this->form->getInput('AsOfDate'); ?></li>
 
 				<li><?php echo $this->form->getLabel('AsOfTime'); ?>
-				<?php echo $this->form->getInput('AsOfTime').'<br /><br /><br /><br /><br />'; ?><span style="position:relative; top:6px;"><i>Format(hh:mm)</i></span></li>
+				<?php echo $this->form->getInput('AsOfTime').'<br /><br />'; ?><span style="position:relative; top:6px;"><i>Format(hh:mm)</i></span></li>
                 
                 <li><?php echo $this->form->getLabel('open_value'); ?>
 				<?php echo $this->form->getInput('open_value'); ?></li>
@@ -104,7 +106,7 @@ JHtml::_('behavior.keepalive');
                  <li><?php echo $this->form->getLabel('phisix'); ?>
 				<?php echo $this->form->getInput('phisix'); ?></li>
 			</ul>
-
+<?php /*?>
 			<div class="clr"></div>
 			<?php echo $this->form->getLabel('snippet'); ?>
 			<div class="clr"></div>
@@ -113,7 +115,7 @@ JHtml::_('behavior.keepalive');
 			<div class="clr"></div>
 			<?php echo $this->form->getLabel('fulltext'); ?>
 			<div class="clr"></div>
-			<?php echo $this->form->getInput('fulltext'); ?>
+			<?php echo $this->form->getInput('fulltext'); ?><?php */?>
 		
         </fieldset>
 	</div>

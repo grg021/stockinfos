@@ -12,7 +12,7 @@
            readonly="true"
        />
 
-       <field
+       <!--<field
            name="title"
            type="text"
            label="COM_STOCKINFOS_FIELD_TITLE_LABEL"
@@ -27,7 +27,8 @@
            description="COM_STOCKINFOS_FIELD_ALIAS_DESC"
            class="inputbox"
            size="30" />
-
+        -->
+        
        <field
            name="subtitle"
            type="text"
