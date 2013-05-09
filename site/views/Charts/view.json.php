@@ -67,7 +67,7 @@ $prefix = $conf->getValue('config.dbprefix');
 	  or die("Could not select examples");
 	  
 	//execute the SQL query and return records
-	$result = mysql_query("SELECT open_value,AsOfDate FROM $table");
+	$result = mysql_query("SELECT open_value,AsOfDate FROM $table order by AsOfDate asc");
 	//fetch tha data from the database
 	$result_array = array();
 	
