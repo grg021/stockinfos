@@ -147,10 +147,10 @@ class StockinfosTableStockinfo extends JTable
         }
         // Verify that the alias is unique
         $table = JTable::getInstance('Stockinfo','StockinfosTable');
-        if ($table->load(array('alias'=>$this->alias,'catid'=>$this->catid)) && ($table->id != $this->id || $this->id==0)) {
-            $this->setError(JText::_('JLIB_DATABASE_ERROR_STOCKINFO_UNIQUE_ALIAS'));
-            return false;
-        }
+       // if ($table->load(array('alias'=>$this->alias,'catid'=>$this->catid)) && ($table->id != $this->id || $this->id==0)) {
+//            $this->setError(JText::_('JLIB_DATABASE_ERROR_STOCKINFO_UNIQUE_ALIAS'));
+//            return false;
+//        }
         return parent::store($updateNulls);
     }
 

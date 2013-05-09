@@ -106,7 +106,7 @@ name="adminForm" id="item-form" class="form-validate">
                  <li><?php echo $this->form->getLabel('phisix'); ?>
 				<?php echo $this->form->getInput('phisix'); ?></li>
 			</ul>
-<?php /*?>
+
 			<div class="clr"></div>
 			<?php echo $this->form->getLabel('snippet'); ?>
 			<div class="clr"></div>
@@ -115,7 +115,7 @@ name="adminForm" id="item-form" class="form-validate">
 			<div class="clr"></div>
 			<?php echo $this->form->getLabel('fulltext'); ?>
 			<div class="clr"></div>
-			<?php echo $this->form->getInput('fulltext'); ?><?php */?>
+			<?php echo $this->form->getInput('fulltext'); ?>
 		
         </fieldset>
 	</div>

@@ -48,6 +48,8 @@ CREATE TABLE IF NOT EXISTS `#__stockinfos` (
   `phisix` DECIMAL(6,2) NOT NULL COMMENT 'PHISIX VALUE',
   `DateModified` datetime NOT NULL COMMENT 'Date Modified',
   `ModifiedBy` DECIMAL(6,2) NOT NULL COMMENT 'Modified By',
+  `DailyChange` DECIMAL(6,2) NOT NULL COMMENT 'DailyChange',
+  `Status` varchar(16) NOT NULL COMMENT 'status',
 
   PRIMARY KEY (`id`),
   KEY `idx_checkout` (`checked_out`),
