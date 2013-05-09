@@ -18,9 +18,12 @@ $export = JURI::root() . "media/com_stockinfos/js/modules/exporting.js";
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Highstock Example</title>
-
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	</head> 
+    
+	<body> 
+	   
 		<script type="text/javascript">
+		jQuery(document).ready(function($){
 $(function() {
 //$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
 	$.getJSON('<?php echo JRoute::_('index.php?option=com_stockinfos&amp;view=Charts&amp;&amp;format=json'); ?>', function(data) {
@@ -29,7 +32,27 @@ $(function() {
 		$('#container').highcharts('StockChart', {
 			
 			rangeSelector : {
-				selected : 1
+				selected : 0,
+				buttons: [{
+	type: 'week',
+	count: 1,
+	text: '1w'
+},
+{
+	type: 'month',
+	count: 6,
+	text: '6m'
+}, {
+	type: 'ytd',
+	text: 'YTD'
+}, {
+	type: 'year',
+	count: 1,
+	text: '1y'
+}, {
+	type: 'all',
+	text: 'All'
+}]
 			},
 
 			title : {
@@ -47,13 +70,10 @@ $(function() {
 	});
 
 });
+});
 		</script>
-	</head> 
-    
-	<body>    
 <script src="<?php echo $highstock; ?>" ></script>
 <script src="<?php echo $export; ?>" ></script>
-
 <div id="container" style="height: 500px; min-width: 500px"></div>
 	</body>
 </html>
